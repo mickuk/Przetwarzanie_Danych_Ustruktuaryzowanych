@@ -65,3 +65,7 @@ Ocenę co najmniej dostateczną (> 50% - min. 15 pkt) uzyskają prace, które sp
 Każda dodatkowa analiza, wykres, ciekawa zastosowana technika będzie wpływać pozytywnie na ocenę (np. wykresy interaktywne, aplikacja w *Shiny*, animacje, algorytmy i struktury danych umożliwiające poprawę szybkości wykonywanych analiz, własne implementacje metod znanych z literatury (z autorskimi modyfikacjami) itp.), nietrywialność stawianych pytań itd.
 
 W szczególności, ocenę maksymalną (bardzo dobrą) uzyskają prace wyróżniające się pod względem jakościowym oraz merytorycznym.
+
+
+## Autorzy:
+Michał Cebula, Michał Kukla
