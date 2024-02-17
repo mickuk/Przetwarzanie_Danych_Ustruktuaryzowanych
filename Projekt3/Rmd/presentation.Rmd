@@ -1,0 +1,85 @@
+---
+title: |
+  | Przejażdżki rowerowe w Jersey City i okolicach:
+  | analiza i wizualizacja
+author: "Michał Cebula & Michał Kukla"
+institute: |
+  | **POLITECHNIKA WARSZAWSKA**
+  | Wydział Matematyki i Nauk Informacyjnych
+date: "2022-05-30"
+aspectratio: 169
+header-includes:
+   - \usepackage[polish]{babel}
+output:
+  beamer_presentation:
+    theme: "Warsaw"
+    colortheme: "whale"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  fig.align = "center",
+  out.width = "65%"
+)
+knitr::opts_knit$set(root.dir = "..")
+```
+
+```{r read_data, file="R/01_read_data.R", cache=TRUE}
+```
+
+```{r theme_update}
+ggplot2::theme_update(
+  plot.title = ggplot2::element_text(
+    face = "bold",
+    hjust = 0.5,
+    size = 16
+  )
+)
+```
+
+## Wstęp
+
+* Celem prezentacji jest przedstawienie jak kształtuje się zainteresowanie rowerami miejskimi w     zależności od różnych parametrów.
+
+* Analiza obejmuje dane dotyczące przejażdżek rowerami miejskimi w Jersey City i okolicach w okresie od stycznia 2016 do kwietnia 2022.
+\footnote{Dane są ogólnodostępne pod adresem: https://s3.amazonaws.com/tripdata/index.html}
+
+## Na jakim obszarze działa Citi Bike?
+
+Citi Bike to system wynajmu rowerów w Nowym Jorku, obejmujący również Jersey City i Hoboken w stanie New Jersey.
+
+```{r us_map, file="R/02_us_map.R", out.width="49.5%", fig.cap="Mapa administracyjna Stanów Zjednoczonych z oznaczonymi stanami New York oraz New Jersey wraz z miastem Jersey City."}
+```
+
+## Jak kształtowała się liczba przejażdżek rowerowych w przeciągu lat?
+
+```{r trips_year, file="R/03_trips_year.R", fig.cap="Łączna liczba przejażdżek rowerowych w latach 2016-2021."}
+```
+
+## Ile przejażdżek rowerowych rozpoczynało się i kończyło w tej samej stacji?
+
+```{r trips_same, file="R/04_trips_same.R", out.width="49.5%", fig.show="hold", fig.cap="Łączna liczba przejażdżek rowerowych trwających od 5 do 45 minut o początku i końcu w tej samej stacji w latach 2016-2021 w ujęciu ilościowym oraz procentowym."}
+```
+
+## Jaki jest związek między liczbą przejażdżek a typem roweru?
+
+```{r trips_rideable, file="R/05_trips_rideable.R", out.width="49.5%", fig.show="hold", fig.cap="Łączna liczba przejażdżek rowerowych ze względu na typ roweru w okresie od 2021-02 do 2022-04 w ujęciu miesięcznym oraz dziennym."}
+```
+
+## Jakie było zainteresowanie mężczyzn i kobiet przejażdżkami rowerowymi?
+
+```{r trips_gender, file="R/06_trips_gender.R", out.width="49.5%", fig.show="hold", fig.cap="Łączna liczba przejażdżek rowerowych ze względu na płeć w latach 2016-2020 w ujęciu ilościowym oraz procentowym."}
+```
+
+## Jak zmieniała się w latach struktura wiekowa rowerzystów?
+
+```{r trips_age, file="R/07_trips_age.R", out.width="49.5%", fig.show="hold", fig.cap="Łączna liczba przejażdżek rowerowych ze względu na grupy wiekowe w ujęciu ilościowym oraz procentowym w latach 2016-2020."}
+```
+
+## Koniec
+
+\begin{center}
+  Dziękujemy za uwagę.
+\end{center}
